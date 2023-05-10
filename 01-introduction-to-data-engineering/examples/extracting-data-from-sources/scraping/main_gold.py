@@ -9,11 +9,13 @@ URL = "https://ทองคําราคา.com/"
 
 class MySpider(scrapy.Spider):
     name = "gold_price_spider"
-    start_urls = [URL,]
+    start_urls = [
+        URL,
+    ]
 
     def parse(self, response):
         header = response.css("#divDaily h3::text").get().strip()
-        print(header)
+        # print(header)
 
         table = response.css("#divDaily .pdtable")
         # print(table)
@@ -26,8 +28,11 @@ class MySpider(scrapy.Spider):
             print(row.css("td::text").extract())
             # print(row.xpath("td//text()").extract())
 
-        # Write to CSV
-        # YOUR CODE HERE
+
+        with open("gold_scraped.csv", "w") as file:
+            writer = csv.writer(file)
+            for row in rows:
+                writer.writerow(row.css("td::text").extract())
 
 
 if __name__ == "__main__":
