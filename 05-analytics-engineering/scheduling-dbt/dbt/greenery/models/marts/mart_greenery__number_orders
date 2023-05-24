@@ -1,0 +1,10 @@
+with source as (
+    select * 
+    from {{ ref('stg_greenery__orders') }}
+)
+, summarized as (
+    select 
+        count(order_guid) as count_orders
+    from source
+)
+select * from summarized

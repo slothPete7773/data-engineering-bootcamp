@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "data-engineer-bootcamp-384606",
+    "private_key_id": "bb4831597dcb85518eba82468aecacf631b66913",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDzJ2ySrEClo2AY\n+KYZEfvJCSSZvJM1xn3FBNA2+oFFA3uTWawSRgpmnVmuDUnji6dXzojEbDZRAIyQ\ncwdRm9hdfU4ZMjmi4Ke+Ykk6OlfUAlZZYoPisgm/XmNyptfZdKsdMCoUI+J59N6v\nD6x5P0hncsxwPAwbvwPfr35H2TKsEBiP3I1wLqu0NQnT5qe+LN24aGfIAd5Z9fiK\nC5VjC/J3q0sd73lc8AVxV5Fytdt1Y/yH4Xk45Bg2w7eiCkx3hjhqfchb0y5x34ku\nFJdiJst4l2aKSW1FbQCTsD72rIlomEsxp6U1hbekGT9vR2a6YhdClJVteTifhKhv\nF6zb5nQdAgMBAAECggEARyhTar0EEjU0izpBCXcs0xFc56y6+/LBnaWh9WTr7bFu\nOZn1dEeRBaSouPnklLWq3FRxy+HLJ3tcp20ySByuffWMpG0BVvwduuZyfZrTVxT0\nBiaBaBcoKRvLSKMw6c9twBX3SnuR7JTPkjWpCLaPTs7Wq0W3WWtWC+EEuKwEWzus\nk3R3R+oEt/1VxYLH/5ZQ4tn17ioiyk/nlxS4AnTugxfcyyMKCq4LCInLkhvBCSa+\n1Zgtt+8zeVsZpVKJR9ZcviOTGfM4dkt/A6Zj/bDU1DtGq7B0+0aR3Alcuj7dbkxE\ngYQkW/COYRbIuBomN0I55XtiVRdcbABwymbZuTURFQKBgQD/RLzG4S5Uk8aLzq4v\nelBvrUqSsixsnaXvkakkOAD5nrCzWrRSMVAq/daE/BCdUY7nu42ZEgdSCudFF7th\nTClLgsjoI22jF+u8WI6Ig5cGj1Ltjs8vl0xNioSgdRspyvMPB4w3VMGHgrEJYnzW\ntHAfdUGVa+8vSjtLfa+ckprBYwKBgQDz2cyznOESLzvXDZvrHn75g4RVhHXmf1EQ\nayjHHPYpvZ+8JisNkqSD/SZ32U8etPQ434Ipe9z0nV1BRHTD6+X5Z8oAn0BkPCx1\nPjTCt+UfTXSlhlxtEaR+uwPphtiCSqOAnZW2FtcH8dHLvDYn8aaCkjBrApIy07hT\nwwAii6asfwKBgEt7VOLuJRgHVndy1xjc7zoGoP19yBsaBr4vcTdvhAJMBW4TjSyc\nvlroEm3iZztNqZcmY3l21klRRg+tM9BSiAd3Fddm2n2WjjN0cDk3yAm9icULLIKj\nF4H6SrtzxWN3SqYQEksuOcfLQnRG9ik608jJkGoRr3lpVt08vhfrVe2HAoGAGlu0\nkMWoXnrUkQ5biDKnrvjUWRoUVHH2pTuwELXEtgZVOdU2WiU7uzil69aFguA0deFT\nBIDrBVXtOpzXskXRegAKCb8tCqimdZXfxhxym8uXjDzVyMRbb4dviNKWnJ7MxZ5D\nDIezfpxY/Ri/EdpBEWQT7707aFsSVZuCbDmELqkCgYABhIF39Ggx71K5ZLN18xnc\n9zV2tTMTBIf1cD4Kn+4M9VCEGTORci6vxh1KD4mbUsW1Xm1qenkgWD/1iNOGEmaB\nCif7HdUcE4cR+QbASbwHalQj3NgKoa7BAt7CLIvbxg6CV4PGbcqwSjOwtqIapgNH\nUVYix8daauoVfilt15B9Xg==\n-----END PRIVATE KEY-----\n",
+    "client_email": "bigq-gcs@data-engineer-bootcamp-384606.iam.gserviceaccount.com",
+    "client_id": "115127574117488768651",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bigq-gcs%40data-engineer-bootcamp-384606.iam.gserviceaccount.com"
+  }
+  

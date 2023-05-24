@@ -1,0 +1,42 @@
+greenery:
+
+  outputs:
+    dbt_slothpete:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: postgres
+      pass: "{{ env_var('DBT_ENV_SECRET_PG_PASSWORD') }}"
+      dbname: greenery
+      schema: dbt_zkan
+
+    prod:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: postgres
+      pass: "{{ env_var('DBT_ENV_SECRET_PG_PASSWORD') }}"
+      dbname: greenery
+      schema: prod
+
+    dbt_slothpete_bigquery:
+      type: bigquery
+      method: service-account
+      project: data-engineer-bootcamp-384606
+      dataset: dbt_slothpete
+      threads: 1
+      keyfile: /workspaces/data-engineering-bootcamp/00-bootcamp-project/dags/cred.json
+      location: asia-southeast1
+
+    prod_bigquery:
+      type: bigquery
+      method: service-account
+      project: dataengineercafe
+      dataset: deb_bootcamp
+      threads: 1
+      keyfile: /workspaces/data-engineering-bootcamp/00-bootcamp-project/dags/cred.json
+      location: asia-southeast1
+
+  target: dbt_slothpete_bigquery
