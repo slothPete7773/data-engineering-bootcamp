@@ -5,7 +5,8 @@ from airflow.operators.python import PythonOperator
 from airflow.utils import timezone
 
 import requests
-
+from google.cloud import bigquery, storage
+from google.oauth2 import service_account
 
 # Import modules regarding GCP service account, BigQuery, and GCS 
 # Your code here
