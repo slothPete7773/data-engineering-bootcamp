@@ -33,6 +33,8 @@ def load_gcs_partitioned(bucket_name, source_file_name, destination_file_name = 
     source_file_path = f"./data/{source_file_name}"
     blob.upload_from_filename(source_file_path)
     print(f"File {source_file_name} uploaded to {destination_file_path} in Bucket {bucket_name}.")
+    
+    return destination_file_path
 
 if __name__ == '__main__':
     file_names = os.listdir("./data/")
