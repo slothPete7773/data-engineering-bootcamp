@@ -42,28 +42,28 @@ def _validate_data():
 	assert results["success"] is True
 
 
-with DAG(
-    dag_id="play_with_airflow_connections_and_hooks",
-    schedule=None,
-    start_date=timezone.datetime(2023, 5, 1),
-    # catchup=False,
-    tags=["DEB", "2023"],
-):
+# with DAG(
+#     dag_id="play_with_airflow_connections_and_hooks",
+#     schedule=None,
+#     start_date=timezone.datetime(2023, 5, 1),
+#     # catchup=False,
+#     tags=["DEB", "2023"],
+# ):
 
-    get_data = PythonOperator(
-        task_id="get_data",
-        python_callable=_get_data,
-    )
+#     get_data = PythonOperator(
+#         task_id="get_data",
+#         python_callable=_get_data,
+#     )
 
-    dump_product_data = PythonOperator(
-        task_id="dump_product_data",
-        python_callable=_dump_data,
-        op_kwargs={"table": "products"},
-    )
+#     dump_product_data = PythonOperator(
+#         task_id="dump_product_data",
+#         python_callable=_dump_data,
+#         op_kwargs={"table": "products"},
+#     )
 
-    validate_data = PythonOperator(
-        task_id="validate_data",
-        python_callable=_validate_data,
-    )
+#     validate_data = PythonOperator(
+#         task_id="validate_data",
+#         python_callable=_validate_data,
+#     )
 
-    [get_data, dump_product_data] >> validate_data
+#     [get_data, dump_product_data] >> validate_data
