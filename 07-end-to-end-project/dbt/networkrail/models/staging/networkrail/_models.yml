@@ -1,0 +1,218 @@
+version: 2
+
+models:
+  - name: stg_networkrail__movements
+    description: Staging model for Network Rail movement data
+    columns:
+      - name: event_type
+        description: Event type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ARRIVAL', 'DEPARTURE']
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: string
+      - name: actual_timestamp
+        description: Actual timestamp in UTC
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: timestamp
+      # - name: gbtt_timestamp
+      #   description: Column gbtt_timestamp
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: timestamp
+      # - name: original_loc_stanox
+      #   description: Column original_loc_stanox
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: planned_timestamp
+      #   description: Column planned_timestamp
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: timestamp
+      # - name: timetable_variation
+      #   description: Column timetable_variation
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: integer
+      # - name: original_loc_timestamp
+      #   description: Column original_loc_timestamp
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: timestamp
+      # - name: current_train_id
+      #   description: Column current_train_id
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: delay_monitoring_point
+      #   description: Column delay_monitoring_point
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: boolean
+      # - name: next_report_run_time
+      #   description: Column next_report_run_time
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: reporting_stanox
+      #   description: Column reporting_stanox
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: actual_timestamp
+      #   description: Column actual_timestamp
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: timestamp
+      # - name: correction_ind
+      #   description: Column correction_ind
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: boolean
+      # - name: event_source
+      #   description: Column event_source
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: train_file_address
+      #   description: Column train_file_address
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: platform
+      #   description: Column platform
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: division_code
+      #   description: Column division_code
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: train_terminated
+      #   description: Column train_terminated
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: boolean
+      # - name: train_id
+      #   description: Column train_id
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: offroute_ind
+      #   description: Column offroute_ind
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: boolean
+      # - name: variation_status
+      #   description: Column variation_status
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: train_service_code
+      #   description: Column train_service_code
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: toc_id
+      #   description: Column toc_id 
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: loc_stanox
+      #   description: Column loc_stanox
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: auto_expected
+      #   description: Column auto_expected
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: boolean
+      # - name: direction_ind
+      #   description: Column direction_ind
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: route
+      #   descriptionroute: Column 
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: planned_event_type
+      #   description: Column planned_event_type
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: next_report_stanox
+      #   description: Column next_report_stanox
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string
+      # - name: line_ind    
+      #   description: Column line_ind    
+      #   tests: 
+      #     - not_null
+      #     - dbt_expectations.expect_column_to_exist
+      #     - dbt_expectations.expect_column_values_to_be_of_type:
+      #         column_type: string

@@ -1,0 +1,21 @@
+networkrail:
+  target: slothpete
+
+  outputs:
+    slothpete:
+      type: bigquery
+      method: service-account
+      project: data-engineer-bootcamp-384606 
+      dataset: dbt_slothPete
+      threads: 1
+      keyfile: /workspaces/data-engineering-bootcamp/07-end-to-end-project/dags/cred.json
+      location: asia-southeast1
+
+    prod:
+      type: bigquery
+      method: service-account
+      project: data-engineer-bootcamp-384606 
+      dataset: networkrail
+      threads: 1
+      keyfile: /workspaces/data-engineering-bootcamp/07-end-to-end-project/dags/cred.json
+      location: asia-southeast1
